@@ -1,0 +1,144 @@
+*
+{
+    --standard-spacing: 5rem;
+}
+
+img
+{
+    border-radius: 20px;
+}
+
+.c-title,
+.c-title h1
+{
+    position: relative;
+    font-size: 44px;
+    width: fit-content;
+}
+
+.c-title h2
+{
+    margin-top: var(--standard-spacing);
+    font-size: 38px;
+    position: relative;
+}
+
+.c-title h2::before,
+h2.c-title::before,
+.c-title h1::before
+{
+    content: '';
+    position: absolute;
+    height: 40px;
+    width: 10px;
+    background-color: #e93339;
+    top: 9px;
+    left: -17px;
+}
+
+.c-title h3::before,
+h3.c-title::before
+{
+    content: '';
+    position: absolute;
+    height: 5px;
+    width: 30px;
+    background-color: #192235;
+    top: 22px;
+    left: -37px;
+}
+
+.c-title h3
+{
+    margin-top: var(--standard-spacing);
+    font-size: 32px;
+}
+
+.c-span
+{
+    color: #e93339;
+    font-size: 30px;
+}
+
+.c-span--custom
+{
+    color: #e93339;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.c-content p,
+.c-content
+{
+    font-size: 20px;
+    line-height: 1.5;
+    padding: 20px;
+}
+
+.final-carousel .c-content
+{
+    margin-top: var(--standard-spacing);
+}
+
+
+.c-content--centered p,
+.c-content--centered,
+.c-span--centered,
+.c-title--centered
+{
+    text-align: center;
+    justify-items: center;
+    justify-self: center;
+}
+
+.c-span--spacer
+{
+    font-size: 25px;
+}
+
+.c-title--main
+{
+    color: #ffffff;
+    font-size: 82px;
+    line-height: 1;
+    margin-bottom: 45px;
+    margin-top: 8vw;
+}
+
+.c-title--sub-main
+{
+    color: #ffffff;
+    font-size: 44px;
+    line-height: 1;
+    margin-bottom: 45px;
+    font-weight: 200;
+
+}
+
+.c-title--main h1
+{
+    font-weight: 500;
+
+}
+
+.c-spacing
+{
+    margin-top: var(--standard-spacing);
+}
+
+.c-bold
+{
+  font-weight: 600;
+}
+
+@media screen and (max-width: 600px) {
+    .c-title--main
+    {
+        font-size: 60px;
+    }
+    .c-title--sub-main
+    {
+        font-size: 35px;
+        font-weight: 200;
+    }
+}

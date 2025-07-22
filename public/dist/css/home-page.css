@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*,
+html
+{
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+  
+.navbar__link
+{
+  color: white;
+}
+
+.is-active
+{
+  color: #e93339;
+}
+a
+{
+  transition: all 1s ease;
+}
+
+a:hover
+{
+  color: #e93339;
+}
+
+.panda-one-color
+{
+    color: #e93339;
+    font-weight: 700;
+    font-size: 50px;
+}
+
+.home-spacer__info
+{
+  padding: 20px;
+  border-radius: 20px;
+  border: #e93339 solid 1px;
+}
+
+.home-spacer
+{
+    margin-top: 10em;
+    display: flex;
+    flex-direction: row;
+    gap: 5vw;
+    text-align: center;
+}
+
+.home-box 
+{
+    align-content: center;
+}
+
+.first-report__container
+{
+    margin-top: 5em;
+}
+
+.first-report__container img
+{
+    border-radius: 20px;
+}
+
+.first-report__container .c-content
+{
+    padding-right: 30px;
+}
+
+.img-logo-navbar
+{
+  height: auto;
+  width: 50px;
+  position: absolute;
+  top: 10px;
+  left: 29vw;
+}
+
+.home-spacer .c-span
+{
+    padding-top: 100px;
+}
+
+.spacer
+{
+    margin-top: 5rem;
+    max-width: 800px;
+    justify-self: center;
+}
+
+.ariane
+{
+  position: relative;
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.c-list
+{
+    list-style: '└ ';
+    padding: 0 0 0 20px;
+    margin: 1.5rem 0;
+
+}
+
+.ariane__list
+{
+  border: rgb(212, 212, 212) solid 1px;
+  background-color: rgba(116, 116, 116, 0.432);
+  color: white;
+
+  border-radius: 32px;
+  display: inline-flex;
+
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+
+  margin-bottom: 0;
+  padding: 8px 26px;
+}
+
+@keyframes animationFramesOne {
+  0% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  20% {
+    transform: translate(73px, -1px) rotate(36deg);
+  }
+  40% {
+    transform: translate(141px, 72px) rotate(72deg);
+  }
+  60% {
+    transform: translate(83px, 122px) rotate(108deg);
+  }
+  80% {
+    transform: translate(-40px, 72px) rotate(144deg);
+  }
+  100% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+}
+
+@-webkit-keyframes animationFramesOne {
+  0% {
+    -webkit-transform: translate(0px, 0px) rotate(0deg);
+  }
+  20% {
+    -webkit-transform: translate(73px, -1px) rotate(36deg);
+  }
+  40% {
+    -webkit-transform: translate(141px, 72px) rotate(72deg);
+  }
+  60% {
+    -webkit-transform: translate(83px, 122px) rotate(108deg);
+  }
+  80% {
+    -webkit-transform: translate(-40px, 72px) rotate(144deg);
+  }
+  100% {
+    -webkit-transform: translate(0px, 0px) rotate(0deg);
+  }
+}
+
+.animationFramesOne {
+  -webkit-animation: animationFramesOne 12s linear infinite;
+  animation: animationFramesOne 12s linear infinite;
+}
+
+.ariane__animations svg {
+  position: absolute;
+  z-index: -1;
+  color: rgb(224, 224, 224);
+  height: 30px;
+  width: 30px;
+}
+.ariane__animations svg:nth-child(1) {
+  left: 18%;
+  top: 36%;
+  animation: animationFramesOne 20s infinite linear;
+}
+.ariane__animations svg:nth-child(2) {
+  bottom: 40%;
+  right: 29%;
+  animation: animationFramesOne 15s infinite linear;
+}
+
+.two-images-one-slider img
+{
+  width: auto;
+  height: 200px;
+
+}
+
+.two-images
+{
+  justify-content: center;
+  justify-items: center;
+}
+
+.sticky-menu
+{
+  display: inline-flex;
+  position: absolute;
+  top: 0em;
+  right: 0em;
+  overflow: hidden;
+  right: 10px;
+}
+
+.sticky-menu ul
+{
+  padding: 20px 30px 20px 30px;
+  border-radius: 20px;
+  max-width: 260px;
+  list-style: '- ';
+  color: white;
+}
+
+.temp
+{
+  position: sticky;
+  top: 2.5em;
+  right: 0;
+}
+
+
+@keyframes defilement {
+  0% {
+      margin-left: 0;
+  }
+  100% {
+      margin-left: -50%;
+  } 
+}
+
+.marque {
+  margin: 2em auto;
+  overflow: hidden;
+}
+
+/* les blocks défilants */
+.marque [data-text] {
+  white-space: nowrap;
+  display: inline-block;
+  min-width: 200%;            /* 2 fois la largeur du conteneur */
+  font-size: 1.5em;
+  line-height: 14rem;
+}
+
+.marque [data-text]::before,
+.marque [data-text]::after {
+  content: attr( data-text) "\00A0";
+  display: inline-block;
+  letter-spacing: 1rem;
+  min-width: 50%;   
+  color: #FFF;
+}
+
+.marque [data-text]::before {
+  animation: marque-defil 20s infinite linear;
+}
+
+@keyframes marque-defil {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -50%;
+  }
+}
+
+header
+{
+  height: 47rem;
+  background-image: url(../dist/images/hero_bg.png);
+  background-repeat: no-repeat;
+  margin-bottom: 3vw;
+}
+
+
+.footer
+{
+  position: relative;
+  background-color: #192235;
+  color: white;
+  height: 400px;
+  margin-top: var(--standard-spacing);
+}
+
+.footer img
+{
+  max-width: 100px;
+}
+
+.footer .nom 
+{
+  display: none;
+}
+
+.unilim::after
+{
+  content: '';
+  display: inline-block;
+  background: url(../dist/images/logo-ul.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 50px;
+  width: 500px;
+  background-position-x: center;
+  margin: 10px 0;
+  max-width: 100%;
+}
+
+.navbar
+{
+  top: 0;
+  overflow: hidden;
+  position: absolute;
+  display: flex;
+  width: 100%;
+  top: 0;
+  padding: 14px 0;
+  z-index: 15;
+  justify-content: center;
+}
+
+
+@keyframes header {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+.navbar-scrolled
+{
+  background-color: #192235;
+  position: fixed;
+  box-shadow: 0 10px 15px rgba(25, 25, 25, .1);
+  animation: 300ms ease-in-out 0s normal none 1 running header;
+}
+
+.footer .navbar 
+{
+  position: sticky;
+}
+
+.mini-menu-final
+{
+  background-color: #192235;
+}
+
+@media screen and (max-width: 600px) {
+  .mini-menu-final
+  {
+    display: none;
+  }
+  .nom
+  {
+    display: none;
+  }
+  .flex-row
+  {
+    flex-direction: column;
+  }
+
+  .w-1\/2
+  {
+    width: 100%;
+  }
+  .home-spacer
+  {
+    display: flex;
+    flex-direction: column;
+  }
+  .home-spacer__info
+  {
+    width: 100%;
+  }
+  .homefp-right img
+  {
+    max-width: 100%;
+  }
+}
+
+/* @media screen and (min-width: 601px) and (max-width: 1200px) {
+  
+}*/

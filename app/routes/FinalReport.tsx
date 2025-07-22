@@ -34,6 +34,15 @@ export default function FinalReport() {
                 <div className="sticky-menu flex flex-col gap-10">
                     <ul className="font-white mini-menu-final">
                         <li><a href="#top">Haut de page</a></li>
+                        <li><a href="#larochefoucauld">Larochefoucauld</a></li>
+                        <ul>
+                            <li><a href="#routes">Routes</a></li>
+                            <li><a href="#preview">Visuelles</a></li>
+                            <li><a href="#back-end">back-end</a></li>
+                            <li><a href="#tri">Système de tri</a></li>
+                        </ul>
+                        <li><a href="#PMG">PMG Atlantique</a></li>
+                        <br />
                         <li><a href="#osaba-immobilier">Osaba Immobilier</a></li>
                         <ul>
                             <li><a href="#footer">Footer</a></li>
@@ -50,7 +59,7 @@ export default function FinalReport() {
                 <div className="flex flex-row gap-20">
                     <div className="w-1/2 home-box">
                         <div className="final-report__container">
-                            <div className="c-title" id="osaba-immobilier">
+                            <div className="c-title" id="larochefoucauld">
                                 <h2>Larochefoucauld</h2>
                             </div>
                             <div className="c-content">
@@ -75,7 +84,7 @@ export default function FinalReport() {
                     <p>
                         Par ce dernier, mon maître de stage m’a apporté les détails nécessaires à la mise en place des modifications mais également de l’utilisation de Susanoo, la librairie interne, tout en me guidant vers la réalisation des tâches en question. 
                     </p>
-                    <p>
+                    <p id="routes">
                         Commençons par l’ajout des pages “Recrutement” et “Honoraires de l’agence” :
                         <br />
                         Ces deux pages doivent être répertorié dans un fichier particulier pour fonctionner, par défaut, il faut créer un fichier pour ces dernières qui sera lui-même dans un dossier au nom de la page. Ce dossier ainsi que cette page devaient être répertorié dans le fichier app.jsx, le but étant de créer une route pour que la page soit accessible par l’url.
@@ -85,20 +94,20 @@ export default function FinalReport() {
                         Par la suite, une fois créé, la page doit contenir une architecture de base, un export de fonction pour afficher la page elle-même, qu’on retrouvera dans tous les documents pour permettre à leur utilisation, par exemple dans le cas de composants, qu’on appelle dans la page principal, pour éviter de rentrer le code imbuvable mais aussi et surtout, lisible de tous.
                     </p>
                     <img src="../dist/images/larochefoucauld-screens/Capture d'écran 2025-07-23 001759.png" alt="Extrait du document PropertyCard, un composant pour afficher les biens immobliers" />
-                    <p>
+                    <p id="preview">
                         Les deux pages en question étaient des pages statiques, récupérer le texte du client et le disposer sur la page et l’adapter à la charte graphique du site. Le dernier point étant le plus compliqué de mon point de vue car adapter un texte qui n’est lui-même pas adapté au code du site est d’autant plus compliqué.
                     </p>
                     <img src="../dist/images/larochefoucauld-screens/Scr10.png" alt="Prévisualisation de la page recrutement du projet larochefoucauld" />
                     <img src="../dist/images/larochefoucauld-screens/scr11.png" alt="Prévisualisation de la page recrutement du projet larochefoucauld" />
                     <img src="../dist/images/larochefoucauld-screens/scr12.png" alt="Prévisualisation de la page recrutement du projet larochefoucauld" />
                     <br />
-                    <p>
+                    <p id="tri">
                         Par la suite, j’ai dû établir des filtres pour les propriétés y compris récupérer celles qui étaient déjà vendues, il m’a fallu modifier l’import de la base de donnée simplement pour récupérer l’entiereté des biens et non seulement les disponibles, tout en les récupérant sur une page pour les afficher.
                         <br />
                         Dans un premier temps, les filtres. La tâche a été plutôt facilité par le précédent développeur ayant travaillé sur le sujet, un principe que j’ai conservé sur le prochain projet majeur sur lequel j’ai travaillé. Dans le cas présent, un composant pour lister les filtres à été créé :
                     </p>
                     <img src="../dist/images/larochefoucauld-screens/Capture d'écran 2025-07-23 002358.png" alt="" />
-                    <p className="c-spacing">
+                    <p className="c-spacing" id="back-end">
                         Cela était surtout pour un affichage et un ajout dynamique de futurs nouveaux filtres pour le front. Evidemment l’import de base de données était déjà présent avant les ajouts nécessaires donc pas à refaire cependant, des nouveaux étaient à réaliser pour les nouveaux filtres présents, un pour récupérer le prix du bien et un pour récupérer la localisation du bien particulièrement pour établir la liste des villes dans lesquelles des biens étaient disposés.
                     </p>
                     <img src="../dist/images/larochefoucauld-screens/Capture d'écran 2025-07-23 003103.png" alt="" className="c-spacing" />                        

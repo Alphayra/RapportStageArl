@@ -35,16 +35,130 @@ export default function FinalReport() {
                     <ul className="font-white mini-menu-final">
                         <li><a href="#top">Haut de page</a></li>
                         <li><a href="#osaba-immobilier">Osaba Immobilier</a></li>
-                        <li><a href="#footer">Footer</a></li>
-                        <li><a href="#navbar">Navbar</a></li>
-                        <li><a href="#debrief">Debrief Osaba</a></li>
-                        <li><a href="#difficulte">Difficultés rencontrées</a></li>
-                        <li><a href="#bilan">Bilan de fin de stage</a></li>
-                        <li><a href="#remerciements">Remerciements</a></li>
+                        <ul>
+                            <li><a href="#footer">Footer</a></li>
+                            <li><a href="#navbar">Navbar</a></li>
+                            <li><a href="#debrief">Debrief Osaba</a></li>
+                            <li><a href="#difficulte">Difficultés rencontrées</a></li>
+                            <li><a href="#bilan">Bilan de fin de stage</a></li>
+                            <li><a href="#remerciements">Remerciements</a></li>
+                        </ul>
                     </ul>
                 </div>
             </div>
             <div className="final-report__container o-container o-container--centered">
+                <div className="flex flex-row gap-20">
+                    <div className="w-1/2 home-box">
+                        <div className="final-report__container">
+                            <div className="c-title" id="osaba-immobilier">
+                                <h2>Larochefoucauld</h2>
+                            </div>
+                            <div className="c-content">
+                                <ul className="c-list">
+                                    <li>Modification de textes</li>
+                                    <li>Modification d’Images</li>
+                                    <li>Créer deux nouvelles pages, Honoraires de l’agence et Recrutement</li>
+                                    <li>Ajout de filtres dans la page “trouver un bien”</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="w-1/2 home-box">
+                        <img src="../dist/images/Larochefoucauld_monogram_blueoval.png" alt="" className="max-w-80 justify-self-center" />
+                    </div>
+                </div>
+                <div className="c-content c-spacing">
+                    <p>
+                        Lors de ce projet, j’ai eu l’occasion de découvrir toute l’architecture de mon environnement de travail pour les deux prochains mois étant le premier projet à m’être confié. Dans le cas présent, voici les tâches qui m’étaient incomblé sur ce projet :
+                    </p>
+                    <img src="../dist/images/larochefoucauld-screens/Capture d'écran 2025-07-23 001212.png" alt="capture d'écran avec les tâches présentés du projet larochefoucauld listé sur l'application clickup" />
+                    <p>
+                        Par ce dernier, mon maître de stage m’a apporté les détails nécessaires à la mise en place des modifications mais également de l’utilisation de Susanoo, la librairie interne, tout en me guidant vers la réalisation des tâches en question. 
+                    </p>
+                    <p>
+                        Commençons par l’ajout des pages “Recrutement” et “Honoraires de l’agence” :
+                        <br />
+                        Ces deux pages doivent être répertorié dans un fichier particulier pour fonctionner, par défaut, il faut créer un fichier pour ces dernières qui sera lui-même dans un dossier au nom de la page. Ce dossier ainsi que cette page devaient être répertorié dans le fichier app.jsx, le but étant de créer une route pour que la page soit accessible par l’url.
+                    </p>
+                    <img src="../dist/images/larochefoucauld-screens/Capture d'écran 2025-07-23 001558.png" alt="Capture d'écran du document app.jsx permettant de créer des routes vers les pages pour l'url du projet" />
+                    <p>
+                        Par la suite, une fois créé, la page doit contenir une architecture de base, un export de fonction pour afficher la page elle-même, qu’on retrouvera dans tous les documents pour permettre à leur utilisation, par exemple dans le cas de composants, qu’on appelle dans la page principal, pour éviter de rentrer le code imbuvable mais aussi et surtout, lisible de tous.
+                    </p>
+                    <img src="../dist/images/larochefoucauld-screens/Capture d'écran 2025-07-23 001759.png" alt="Extrait du document PropertyCard, un composant pour afficher les biens immobliers" />
+                    <p>
+                        Les deux pages en question étaient des pages statiques, récupérer le texte du client et le disposer sur la page et l’adapter à la charte graphique du site. Le dernier point étant le plus compliqué de mon point de vue car adapter un texte qui n’est lui-même pas adapté au code du site est d’autant plus compliqué.
+                    </p>
+                    <img src="../dist/images/larochefoucauld-screens/Scr10.png" alt="Prévisualisation de la page recrutement du projet larochefoucauld" />
+                    <img src="../dist/images/larochefoucauld-screens/scr11.png" alt="Prévisualisation de la page recrutement du projet larochefoucauld" />
+                    <img src="../dist/images/larochefoucauld-screens/scr12.png" alt="Prévisualisation de la page recrutement du projet larochefoucauld" />
+                    <br />
+                    <p>
+                        Par la suite, j’ai dû établir des filtres pour les propriétés y compris récupérer celles qui étaient déjà vendues, il m’a fallu modifier l’import de la base de donnée simplement pour récupérer l’entiereté des biens et non seulement les disponibles, tout en les récupérant sur une page pour les afficher.
+                        <br />
+                        Dans un premier temps, les filtres. La tâche a été plutôt facilité par le précédent développeur ayant travaillé sur le sujet, un principe que j’ai conservé sur le prochain projet majeur sur lequel j’ai travaillé. Dans le cas présent, un composant pour lister les filtres à été créé :
+                    </p>
+                    <img src="../dist/images/larochefoucauld-screens/Capture d'écran 2025-07-23 002358.png" alt="" />
+                    <p className="c-spacing">
+                        Cela était surtout pour un affichage et un ajout dynamique de futurs nouveaux filtres pour le front. Evidemment l’import de base de données était déjà présent avant les ajouts nécessaires donc pas à refaire cependant, des nouveaux étaient à réaliser pour les nouveaux filtres présents, un pour récupérer le prix du bien et un pour récupérer la localisation du bien particulièrement pour établir la liste des villes dans lesquelles des biens étaient disposés.
+                    </p>
+                    <img src="../dist/images/larochefoucauld-screens/Capture d'écran 2025-07-23 003103.png" alt="" className="c-spacing" />                        
+                    <div className="flex flex-row c-spacing">
+                        <div className="w-1/2 home-box">
+                            <img src="../dist/images/larochefoucauld-screens/Capture d'écran 2025-07-23 003857.png" alt="" />
+                        </div>
+                        <div className="w-1/2 home-box">
+                            <p>
+                                Dans la partie orange de l’image au-dessus est traité seulement l’affichage des propriétés pour tous les futurs filtres qui vont être ajoutés.
+                                <br />
+                                Dans la partie rose, le return, donc la partie qui figurera sur la page finale, en commençant par l’import du document PropertiesFilter.jsx pour avoir la liste affichée, et un if pour afficher seulement le champs adapté au filtre sélectionné, par évidence, nous n'affichant pas le select pour les villes lorsqu'un autre filtre est sélectionné. On peut voir la même chose par exemple dans la partie verte.
+                                <br />
+                                Ensuite, pour la dernière partie, en rouge, simplement le retour si aucune propriété est présente ainsi qu’un loader le temps que les propriétés chargent pour ne pas afficher le message d’aucun bien présent alors que ce n’est pas le cas, les propriétés étant affichés par le “cards” après les deux points (étant un if else comprimé, honnêtement très pratique). 
+                            </p>
+                        </div>
+                    </div>
+                    <p>
+                        Pour le reste des tâches à éxécuter sur ce projet, elles étaient relativement simples, à base de changement de texte, de modification d’image mais en conservant le ratio initial, et c’est tout globalement. 
+                        C’était un projet intéressant avec lequel s’introduire au fonctionnement et aux bonnes manières de l’entreprise.
+
+                    </p>
+                </div>
+                
+                <div className="flex flex-row gap-20">
+                    <div className="w-1/2 home-box">
+                        <div className="final-report__container">
+                            <div className="c-title" id="osaba-immobilier">
+                                <h2>PMG Atlantique</h2>
+                            </div>
+                            <div className="c-content">
+                                <ul className="c-list">
+                                    <li>Reproduire le modèle fourni par le client pour son site</li>
+                                    <li>Respecter les animations du modèle d’origine</li>
+                                    <li>Respecter les sliders du modèle d’origine</li>
+                                    <li>Le réadapter à ses attentes et aux textes qu’il demande en collaboration avec le chef de projet</li>
+                                    <li>Ajouter une fonction d’article back-end</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="w-1/2 home-box">
+                        <img src="../dist/images/logo-pmg.png" alt="" />
+                    </div>
+                </div>
+                <div className="c-content">
+                    <p>
+                        PMG était un petit projet que j’ai eu l’occasion de me pencher au milieu du projet Osaba abordé dans la partie suivante.
+                        <br />
+                        Il m’a seulement consisté à savoir comment les sites template en statique sont abordés étant la solution par évidence la moins cher proposé par l’entreprise. 
+                        <br />
+                        Pour faire un résumé n’ayant pas d’images pour illustrer car réalisé avec boostrap et extrêmement long et mal optimisé comparé aux principes introduit lors du premier projet, tout l’html sur une seule page, un code pour ainsi dire illisible, le ctrl F étant le meilleur ami de l’Homme. 
+                        <br />
+                        On m’a indiqué que ce projet est un très vieux projet qui est donc avec des anciennes technologies mais également basé sur un modele donc moins optimisé que si ce dernier avait été reproduit selon les méthodes actuelles. 
+                        <br />
+                        Dans ce contexte, j’ai dû modifier la grande majorité du texte, les images en modifiant beaucoup de codes et rajouter une catégorie dans les images diffusés, et changer leur logo dans la navbar, cette étape était le plus longue car nécessite de refaire le responsive de la navbar car le logo est plus haut que le précédent.
+                        <br />
+                        Je pense que ce projet était l’exemple parfait de “optimiser un code, c’est bien, surtout pour le prochain qui s’y collera” et de faire attention à mes documents.
+                    </p>
+                </div>
                 <div className="flex flex-row gap-20">
                     <div className="w-1/2 home-box">
                         <div className="final-report__container">
